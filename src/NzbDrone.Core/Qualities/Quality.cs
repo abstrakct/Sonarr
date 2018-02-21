@@ -75,6 +75,7 @@ namespace NzbDrone.Core.Qualities
         //public static Quality WEBRip2160p { get { return new Quality(17, "WEBRip-2160p"); } }
         public static Quality WEBDL2160p => new Quality(18, "WEBDL-2160p");
         public static Quality Bluray2160p => new Quality(19, "Bluray-2160p");
+        public static Quality Anime1080p => new Quality(20,"Anime-1080p");
 
         static Quality()
         {
@@ -94,6 +95,7 @@ namespace NzbDrone.Core.Qualities
                 HDTV2160p,
                 WEBDL2160p,
                 Bluray2160p,
+                Anime1080p
             };
 
             AllLookup = new Quality[All.Select(v => v.Id).Max() + 1];
@@ -118,6 +120,7 @@ namespace NzbDrone.Core.Qualities
                 new QualityDefinition(Quality.HDTV2160p)   { Weight = 12, MinSize = 0, MaxSize = null },
                 new QualityDefinition(Quality.WEBDL2160p)  { Weight = 13, MinSize = 0, MaxSize = null },
                 new QualityDefinition(Quality.Bluray2160p) { Weight = 14, MinSize = 0, MaxSize = null },
+                new QualityDefinition(Quality.Anime1080p)  { Weight = 15, MinSize = 0, MaxSize = null },
             };
         }
 
